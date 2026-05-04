@@ -1,0 +1,81 @@
+.shell {
+  display: grid;
+  gap: 16px;
+}
+
+.hero {
+  border-left: 4px solid #7c3aed;
+  padding-left: 16px;
+}
+
+.metricGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.metric {
+  min-height: 96px;
+}
+
+.statusGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.previewBand {
+  border: 1px solid color-mix(in srgb, #7c3aed 26%, #d4d4d8);
+  border-radius: 8px;
+  padding: 16px;
+  background: color-mix(in srgb, #7c3aed 7%, white);
+}
+
+.swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  background: #7c3aed;
+  display: inline-block;
+}
+
+.tableWrap {
+  overflow-x: auto;
+}
+
+.dataTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.dataTable th,
+.dataTable td {
+  border-bottom: 1px solid #d4d4d8;
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.dataTable th {
+  color: #52525b;
+  font-weight: 600;
+}
+
+.statePanel {
+  min-height: 112px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+@media (max-width: 760px) {
+  .metricGrid,
+  .statusGrid,
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+}

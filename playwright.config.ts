@@ -1,5 +1,14 @@
 import { defineConfig, devices } from "@playwright/test";
 
+const previewEnv = {
+  SHOPIFY_API_KEY: process.env.SHOPIFY_API_KEY || "test_api_key",
+  SHOPIFY_API_SECRET: process.env.SHOPIFY_API_SECRET || "test_api_secret",
+  SHOPIFY_APP_URL: process.env.SHOPIFY_APP_URL || "http://127.0.0.1:3000",
+  DATABASE_URL: process.env.DATABASE_URL || "postgresql://preview:preview@127.0.0.1:5432/preview",
+  SCOPES: process.env.SCOPES || "read_products",
+  PLAYWRIGHT_PREVIEW: "true",
+};
+
 export default defineConfig({
   testDir: "./tests",
   testMatch: /.*\.(e2e|spec)\.ts/,
@@ -14,6 +23,7 @@ export default defineConfig({
     process.env.PLAYWRIGHT_START_SERVER === "true"
       ? {
           command: "npm run dev:preview",
+          env: previewEnv,
           url: "http://127.0.0.1:3000/preview",
           reuseExistingServer: !process.env.CI,
           timeout: 120000,

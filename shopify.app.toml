@@ -1,6 +1,6 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
-client_id = "5c723a816812edf32735487a66a42854"
+client_id = "81c610014e0c420424738026cc0af7c5"
 application_url = "https://example.com"
 embedded = true
 name = "Variant Visibility Lite"

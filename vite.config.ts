@@ -5,6 +5,6 @@ import tsconfigPaths from "vite-tsconfig-paths";
 export default defineConfig({
   plugins: [reactRouter(), tsconfigPaths()],
   server: {
-    allowedHosts: ["localhost", "127.0.0.1"],
+    allowedHosts: ["localhost", "127.0.0.1", ".trycloudflare.com"],
   },
 });
